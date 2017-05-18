@@ -93,7 +93,7 @@ begin
 			when state0 =>
 				--go forward
 				motor_l_direction 	<= '1';
-				motor_r_direction 	<= '1';
+				motor_r_direction 	<= '0';
 				motor_l_reset		<= '0';
 				motor_r_reset		<= '0';
 				count_reset		<= '0';
@@ -102,26 +102,26 @@ begin
 			when state1 =>
 				--go left
 				motor_l_direction 	<= '1';
-				motor_r_direction	<= '1';
-				motor_l_reset		<= '1';
-				motor_r_reset		<= '0';
+				motor_r_direction	<= '0';
+				motor_l_reset		<= '0';
+				motor_r_reset		<= '1';
 				count_reset		<= '0';
 				next_state 		<= state1;
 
 			when state2 => 
 				--go forward
 				motor_l_direction 	<= '1';
-				motor_r_direction 	<= '1';
+				motor_r_direction 	<= '0';
 				motor_l_reset		<= '0';
 				motor_r_reset		<= '0';
 				count_reset		<= '0';
 				next_state 		<= state2;
 
 			when state3 => 
-				--go left
-				motor_l_direction 	<= '1';
-				motor_r_direction	<= '1';
-				motor_l_reset		<= '1';
+				--go hard left
+				motor_l_direction 	<= '0';
+				motor_r_direction	<= '0';
+				motor_l_reset		<= '0';
 				motor_r_reset		<= '0';
 				count_reset		<= '0';
 				next_state 		<= state3;
@@ -129,7 +129,7 @@ begin
 			when state4 =>
 				--go right
 				motor_l_direction 	<= '1';
-				motor_r_direction	<= '1';
+				motor_r_direction	<= '0';
 				motor_l_reset		<= '0';
 				motor_r_reset		<= '1';
 				count_reset		<= '0';
@@ -138,25 +138,25 @@ begin
 			when state5 =>
 				--go forward
 				motor_l_direction 	<= '1';
-				motor_r_direction 	<= '1';
+				motor_r_direction 	<= '0';
 				motor_l_reset		<= '0';
 				motor_r_reset		<= '0';
 				count_reset		<= '0';
 				next_state 		<= state5;
 
 			when state6 =>
-				--go right
+				--go hard right
 				motor_l_direction 	<= '1';
 				motor_r_direction	<= '1';
 				motor_l_reset		<= '0';
-				motor_r_reset		<= '1';
+				motor_r_reset		<= '0';
 				count_reset		<= '0';
 				next_state 		<= state6;
 
 			when state7 =>
 				--go forward
 				motor_l_direction 	<= '1';
-				motor_r_direction 	<= '1';
+				motor_r_direction 	<= '0';
 				motor_l_reset		<= '0';
 				motor_r_reset		<= '0';
 				count_reset		<= '0';
